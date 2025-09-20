@@ -11,7 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:5173","https://techgen-assignment-dst2.vercel.app"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:5173","https://techgen-assignment-dst2.vercel.app"], methods:[
+    "GET", "POST"
+],credentials: true }));
 app.use(express.json());
 
 // MongoDB Connection
